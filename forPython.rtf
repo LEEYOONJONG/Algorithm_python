@@ -1,0 +1,44 @@
+리스트에서 최소값 찾기 - min()
+
+파이썬의 min함수를 사용하면 리스트에서 최소값을 찾을 수 있습니다.
+
+>>> item = [5, 13, 66, 12, 78, 1, 78] 
+>>> min(item)  
+1 
+
+###
+
+리스트에서 최대값 찾기 - max()
+
+파이썬의 max함수를 사용하면 리스트에서 최대값을 찾을 수 있습니다.
+
+>>> item = [5, 13, 66, 12, 78, 1, 78] 
+>>> max(item)  
+78
+
+### 
+
+2차원 리스트 입력 받기
+
+3 4
+0 1 0 0
+0 0 0 0
+0 0 1 0
+위와 같이 첫째 줄에 2차원 리스트의 행과 열이 주어지고, 둘째 줄부터 행렬의 데이터가 주어질 경우,
+n,m=map(int, input().split())
+
+#1
+mylist=[0 for _ in range(n)]
+
+for i in range(n):
+    mylist[i]=list(map(int, input().split()))
+
+
+#2
+mylist=[]
+for i in range(n):
+    mylist.append(list(map(int, input().split())))
+
+
+#3
+mylist=[list(map(int, input().split())) for _ in range(n)]
