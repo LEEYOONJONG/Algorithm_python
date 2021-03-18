@@ -7,7 +7,6 @@ k = int(input())
 
 maximum=0
 
-
 for i in range(n):
     zero=0
     for j in range(m):
