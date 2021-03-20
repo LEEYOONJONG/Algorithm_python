@@ -1,14 +1,15 @@
 import random
 import time
 
-def exchangesort(data): #(2) exchange sort 알고리즘 구현
+def exchangesort(data): 
+    #(2) exchange sort 알고리즘 구현하기
     len_data = len(data)
     for i in range(len_data-1):
         for j in range(i+1, len_data):
             if data[i] > data[j]:
                 data[i], data[j] = data[j], data[i]
 
-def mergesort(data): #(3) merge sort 알고리즘 구현
+def mergesort(data): #(3) merge sort 알고리즘 구현하기
     def sort(low, high):
         if high-low < 2:
             return
@@ -41,7 +42,7 @@ def mergesort(data): #(3) merge sort 알고리즘 구현
 n = int(input("n을 입력하세요 : "))
 
 data=[]
-for i in range(n): # (1) n개의 데이타를 random으로 생성
+for i in range(n): # (1) n개의 데이타를 random으로 생성한다
     tmp = random.randint(1, 100)
     data.append(tmp)
 data2 = data.copy()
