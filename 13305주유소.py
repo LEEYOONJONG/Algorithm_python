@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(100010)
 
-def oilbank(start, end):
+def oilbank(start, end): ## 시간초과 나는 코드
     if start==end:
         return 0
     
@@ -18,13 +18,24 @@ def oilbank(start, end):
     
     return costSum + oilbank(start, minIndex)
 
+def oilbank2(start, end):
+    minPrice = 1000000001
 
+    res = 0
+    
+    for i in range(start, end):
+        if minPrice > price[i]:
+            minPrice = price[i]
+            res += minPrice*dist[i]
+        else:
+            res += minPrice*dist[i]
+
+    return res
 
 n = int(input())
 
 
 dist = list(map(int, input().split()))
-# dist.append(0)
 price = list(map(int, input().split()))
 
-print(oilbank(0, n-1))
+print(oilbank2(0, n-1))
